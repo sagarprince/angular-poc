@@ -1,0 +1,6 @@
+<div class="tabs">
+    <div class="tab" *ngFor="let tab of tabs" [routerLink]="tab.path" routerLinkActive="active" disableLink="true">
+        <span>{{tab.name}}</span>
+        <app-tab-progress [percentage]="tab | tabPercentage"></app-tab-progress>
+    </div>
+</div>

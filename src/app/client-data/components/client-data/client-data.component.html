@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSave(form)" novalidate [formGroup]="form" autocomplete="off">
+    <div>
+        <input placeholder="name" formControlName="name" />
+    </div>
+    <div>
+        <input placeholder="Desc" formControlName="desc" />
+    </div>
+    <app-tabs-navigation (onNext)="onSave($event)" [isNextDisabled]="form.invalid"></app-tabs-navigation>
+</form>
